@@ -4,9 +4,9 @@ class Rectangle {
 	height;
 
 	constructor(w, h){
-		this.width = w;
-		this.height = h;
+		this.w = width;
+		this.h = height;
 	}
 }
 
-module,exports = Rectangle;
+module.exports = Rectangle;
