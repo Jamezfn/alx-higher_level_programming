@@ -15,12 +15,12 @@ def main():
             charset="utf8"
             )
     cur = conn.cursor()
-    query = """SELECT * FROM states WHERE name =  '{:s}'
+    query = """SELECT * FROM states where  name =  '{:s}'
             ORDER BY id ASC""".format(search)
     cur.execute(query)
     row = cur.fetchall()
     for r in row:
-        if r[1][0] == 'N':
+        if r[1] == search
             print(r)
     cur.close()
     conn.close()
