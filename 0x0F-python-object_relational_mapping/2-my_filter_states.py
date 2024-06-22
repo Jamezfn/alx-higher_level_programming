@@ -21,7 +21,7 @@ def main():
 
     if row:
         for r in row:
-            if r[1] == search
+            if r[1] == state_name
             print(r)
     else:
         print("No state found with the name '{}'".fomat(state_name))
