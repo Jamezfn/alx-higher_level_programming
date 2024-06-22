@@ -15,6 +15,7 @@ def main():
             charset="utf8"
             )
     cur = conn.cursor()
+    state_name = sys.argv[4]
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cur.execute(query,(state_name,))
     row = cur.fetchall()
