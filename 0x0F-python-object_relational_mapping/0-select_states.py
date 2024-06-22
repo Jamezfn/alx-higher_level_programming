@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
-"""lists all states from the database hbtn_0e_0_usa"""
-
-import MySQLdb
+"""
+Module list state
+"""
 import sys
+import MySQLdb
+
 
 def main():
     conn = MySQLdb.connect(
@@ -11,15 +12,15 @@ def main():
                         port=3306,
                         user=sys.argv[1],
                         passwd=sys.argv[2],
-                        db=sys.argv[1],
+                        db=sys.argv[3],
                         charset="utf8"
                             )
     cur = conn.cursor()
-    query = "SELECT id, name FROM states ORDER BY id ASC"
+    query = "SELECT id,name FROM states ORDER by id ASC"
     cur.execute(query)
     row = cur.fetchall()
     for r in row:
-         print(r)
+        print(r)
     cur.close()
     conn.close()
 
