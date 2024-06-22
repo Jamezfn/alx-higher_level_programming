@@ -15,13 +15,17 @@ def main():
             charset="utf8"
             )
     cur = conn.cursor()
-    query = """SELECT * FROM states where  name =  '{:s}'
-            ORDER BY id ASC""".format(search)
-    cur.execute(query)
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    cur.execute(query,(state_name,))
     row = cur.fetchall()
-    for r in row:
-        if r[1] == search
+
+    if row:
+        for r in row:
+            if r[1] == search
             print(r)
+    else:
+        print("No state found with the name '{}'".fomat(state_name))
+
     cur.close()
     conn.close()
 
