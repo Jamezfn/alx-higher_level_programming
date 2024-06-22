@@ -1,26 +1,20 @@
 #!/usr/bin/python3
 
+"""lists all states from the database hbtn_0e_0_usa"""
+
+import MySQLdb
+import sys
+
 if __name__ == "__main__":
-    import MySQLdb
-    import sys
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[1])
+    cur = conn.cursor()
 
-    db = MySQLdb.connect(host=localhost, port=3306, user=username, passwd=password, db=databases)
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    query_rows = cur.fetchall()
 
-    cur = db.cursor()
-    try:
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
-        results = cursor.fetchall()
-    except MySQLdb.Error as err:
-        print "Error fetching data [%d]: %s", %(err.argv[0], err.argv[1], err.arv[2], err.argv[3])
-    except Index Error:
-        print "Error fetching data [%d]: %s", str(err)
+    for row in query_rows:
+    print(row)
 
-    fow row in rows:
-        print(row)
-
-    cursor.close()
-    db.close
+    cur.close()
+    conn.close()
