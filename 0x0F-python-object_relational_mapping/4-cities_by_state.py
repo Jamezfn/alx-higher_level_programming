@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
- Write a script that lists all cities 
+ a script that lists all cities
  from the database hbtn_0e_4_usa
 """
-import syd
+import sys
 import MySQLdb
 
 
@@ -21,10 +21,10 @@ def main():
                 FROM cities INNER JOIN states ON cities.state_id=states.id"""
     cur.execute(query)
     row = cur.fetchall()
-    for r row:
+    for r in row:
         print(r)
-        cur.close()
-        conn.close()
+    cur.close()
+    conn.close()
 
 
 if __name__ == "__main__":
