@@ -19,17 +19,17 @@ def main():
                             )
     state_name = sys.argv[4]
     cur = conn.cursor()
-    cur.execute("SELECT cities.name FROM cities \ 
-    JOIN states ON cities.state_id = state.id WHERE states.name LIKE %s \ 
-    ORDER BY cities.id",(state_name))
+    cur.execute("SELECT cities.name FROM cities \
+    JOIN states ON cities.state_id = states.id WHERE states.name LIKE %s \
+    ORDER BY cities.id", (state_name,))
     row = cur.fetchall()
     re = ""
     for r in row:
-        re +=r[0] + ", "
-        print(re[0:-2:])
-        cur.close()
-        conn.close()
+        re += r[0] + ", "
+    print(re[0:-2:])
+    cur.close()
+    conn.close()
 
 
-if__name__ == "__main__":
+if __name__ == "__main__":
     main()
