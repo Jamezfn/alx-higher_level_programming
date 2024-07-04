@@ -1,3 +1,3 @@
 #!/bin/bash
-#script to trake url and display its size
-echo $(curl -s -w "%{size_download}\n" -o /dev/null "$1")
+# takes in url and sends a request to it.
+curl -s "$1" | wc -c
