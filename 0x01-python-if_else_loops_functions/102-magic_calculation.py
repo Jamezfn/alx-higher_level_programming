@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 def magic_calculation(a, b, c):
-    """Perform a calculation based on the values"""
+    """Match bytecode provided by Holberton School."""
     if a < b:
-        return(c)
-    elif c > b:
-        return(a + b)
-    else:
-        return(a * b - c)
+        return c
+    if c > b:
+        return a + b
+    return a * b - c
+
+print(magic_calculation(1, 2, 3))
