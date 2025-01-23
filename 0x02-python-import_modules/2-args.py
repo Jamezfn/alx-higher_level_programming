@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-import sys
+
 if __name__ == "__main__":
-    largs = sys.argv
-    if (len(sys.argv) - 1) == 0:
+    """Prints the number of and the list of its arguments."""
+    import sys
+    
+    count = len(sys.argv) - 1
+
+    if count == 0:
         print("0 arguments.")
-    elif (len(sys.argv) - 1) == 1:
-        print("1 argument:")
+    elif count == 1:
+        print("1 argument.")
     else:
-        print(f"{(sys.argv -1):d} arguments:")
-    for i in range(1, len(largs)):
-        print(f"{i:d}: {largs[i]}")
+        print(f"{count} arguments: ")
+    
+    for i in range(1, len(sys.argv)):
+        print(f"{i}: {sys.argv[i]}")
