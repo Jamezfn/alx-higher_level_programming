@@ -9,9 +9,9 @@ if __name__ == "__main__":
     if count == 0:
         print("0 arguments.")
     elif count == 1:
-        print("1 argument.")
+        print("1 argument:")
     else:
-        print(f"{count} arguments: ")
+        print(f"{count} arguments:")
     
     for i in range(1, len(sys.argv)):
         print(f"{i}: {sys.argv[i]}")
