@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Classes and Objects"""
 
 """Define a MagicClass matching exactly a bytecode provided by Holberton."""
 

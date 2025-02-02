@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Classes and Objects"""
 
 """Define a class Square."""
 
