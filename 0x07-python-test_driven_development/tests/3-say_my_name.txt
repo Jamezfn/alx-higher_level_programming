@@ -1,0 +1,27 @@
+say_my_name
+===========
+
+Prints "My name is <first name> <last name>"
+
+If the first and last name are not strings, it raises a TypeError.
+
+Example usage:
+::
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name(1, 2)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("James", 2)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(1, "James")
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+	>>> say_my_name("James")
+        My name is James
+
+	>>> say_my_name("James", "Mukhola")
+        My name is James Mukhola
