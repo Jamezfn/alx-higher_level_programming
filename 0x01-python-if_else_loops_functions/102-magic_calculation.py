@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-
+"""ByteCode -> Python #2"""
 def magic_calculation(a, b, c):
-    """Match bytecode provided by Holberton School."""
+    """Python bytecode"""
     if a < b:
         return c
-    if c > b:
+    elif c > b:
         return a + b
-    return a * b - c
+    else:
+        return a * b - c
+
 
 print(magic_calculation(1, 2, 3))
+print(magic_calculation(3, 2, 1))
+print(magic_calculation(4, 2, 3))
