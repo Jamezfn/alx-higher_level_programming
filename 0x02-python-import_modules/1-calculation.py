@@ -1,19 +1,16 @@
 #!/usr/bin/python3
-
+"""My first toolbox!"""
+from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
-    """Imports functions from the file calculator_1.py, 
-    does some Maths, and prints the result."""
-    from calculator_1 import add, sub, mul, div
-
+    """Does some mathematics and prints them results"""
     a = 10
     b = 5
 
     operations = [
             ("+", add),
             ("-", sub),
-            ("*", sub),
+            ("*", mul),
             ("/", div)
-    ]
-
+            ]
     for op, func in operations:
-        print(f"{a} {op} {b} = {func(a, b)}")
+        print("{} {} {} = {}".format(a, op, b, func(a, b)))

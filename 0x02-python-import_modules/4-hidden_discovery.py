@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
+"""Who are you?"""
 if __name__ == "__main__":
-    """Prints all the names defined by the compiled module hidden_4.pyc"""
+    """Prints all names defined in a file"""
     import hidden_4
-
     names = dir(hidden_4)
-    filter_names = []
+    filter_name = []
     for name in names:
-        if not name.startswith("__"):
-            filtered_namesappend(name)
-    print(filter_names)
+        if not name.startswith('__'):
+            filter_name.append(name)
+    print(filter_name)
