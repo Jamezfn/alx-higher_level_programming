@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
+"""Find the max"""
 def max_integer(my_list=[]):
-    """Finds the biggest integer of a list."""
-    if not my_list:
+    """Finds and returns the biggest integer in a list."""
+    if len(my_list) == 0:
         return None
-
-    max_value = my_list[0]
-    for num in my_list[1:]:
-        if num > max_value:
-            max_value = num 
-    return max_value
+    big_int = my_list[0]
+    for i in my_list[1:]:
+        if i > big_int:
+            big_int = i
+    return big_int
