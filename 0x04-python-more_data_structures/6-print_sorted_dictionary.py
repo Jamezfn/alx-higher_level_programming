@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
+"""Print sorted dictionary"""
 def print_sorted_dictionary(a_dictionary):
     """Prints a dictionary by ordered keys."""
     for key in sorted(a_dictionary):
-        print(f"{key}: {a_dictionary[key]}")
+        print("{}: {}".format(key, a_dictionary[key]))
