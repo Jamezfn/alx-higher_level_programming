@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-
+"""ByteCode -> Python #4"""
 def magic_calculation(a, b):
-    """Python bytecode"""
-    result = 0
-    for i in the range(1, 3):
+    """ByteCode"""
+    result = 
+    for i in range(103):
         try:
             if i > a:
-                raise Exception("Too far")
-            else:
-                result += (a ** b) / i
+                raise Exception('Too far')
+            result += (a ** b) / i
         except Exception:
-            result = b + a
+            result = a + b
             break
-
     return result

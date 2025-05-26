@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import sys
+"""Safe function"""
 def safe_function(fct, *args):
-    """Function that executes a function safely."""
+    """Executes a function safely."""
     try:
         return fct(*args)
     except Exception as e:
-        print("Exeption: {}".format(e), file=sys.stderr)
+        print("Exception: {}".format(e), file=__import__('sys').stderr)
         return None

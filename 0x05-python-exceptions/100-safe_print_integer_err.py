@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import sys
-
+"""Safe integer print with error message"""
 def safe_print_integer_err(value):
     """Prints an integer."""
     try:
         print("{:d}".format(value))
-    except (TypeError, ValueError) as e:
-        print(f"Exception: {e}", file=sys.stderr)
+        return True
+    except Exception as e:
+        print("Exception: {}".format(e), file=__import__('sys').stderr)
         return False
