@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Classes and Objects"""
+"""My first square"""
 class Square:
-     """An empty class that defines a square."""
-     pass
+    """Empty square class"""
+    pass

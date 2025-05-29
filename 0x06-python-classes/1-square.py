@@ -1,8 +1,7 @@
-#!/usr/bin/python3
-"""Classes and Objects"""
-
+#!/bin/usr/python3
+"""Square with size"""
 class Square:
-    """A class that defines a square."""
+    """Define a square"""
     def __init__(self, size):
-         """Initialize a new Square."""
-         self.__size = size
+        """Initialize an instance"""
+        self.__size = size
