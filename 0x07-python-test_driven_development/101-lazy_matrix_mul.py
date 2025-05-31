@@ -4,4 +4,6 @@
 import numpy as np
 def lazy_matrix_mul(m_a, m_b):
     """Multiplies 2 matrices"""
-    return np.matmul(np.array(m_a), np.array(m_b))
+    a = np.array(m_a, dtype=float)
+    b = np.array(m_b, dtype=float)
+    return np.matmul(a, b)
