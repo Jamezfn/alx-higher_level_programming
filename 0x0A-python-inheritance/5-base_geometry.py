@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Iheritance"""
+"""Geometry module"""
 class BaseGeometry:
     """Empty class"""
     pass

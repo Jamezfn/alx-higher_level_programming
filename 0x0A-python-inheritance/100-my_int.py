@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Class inheritance"""
+"""My integer"""
 class MyInt(int):
-    """My integer"""
+    """Describes a class that inverts == and != operators"""
     def __eq__(self, other):
-        return super().__ne__(other)
+        """Inverts equal to"""
+        return not super().__eq__(other)
 
     def __ne__(self, other):
-        return super().__eq__(other)
+        """Inverts not equal to"""
+        return not super().__ne__(other)

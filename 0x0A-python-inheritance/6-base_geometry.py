@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Class Inheritance"""
+"""Improve Geometry"""
 class BaseGeometry:
-    """Improve Geometry"""
+    """Describes a base class"""
     def area(self):
-        """Raises an Exception with the message area() is not implemented"""
+        """Raises an exception indicating area is not implemented."""
         raise Exception("area() is not implemented")
