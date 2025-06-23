@@ -1,10 +1,6 @@
 #!/usr/bin/node
-
-let argumentCount = 0;
+let count = 0;
 exports.logMe = function (item) {
-	function print(){
-		argumentCount++;
-		console.log('${argumentCount - 1}: ${item}');
-	}
-	print();
-};
+	console.log(`${count}: ${item}`);
+	count++
+}

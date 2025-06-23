@@ -1,18 +1,13 @@
 #!/usr/bin/node
-
-module.exports = class Square extends require('./5-square') {
-	charPrint(char = 'X') {
-		if (this.width && this.height){
-			let output = "";
-			for (let i = 0; i < this.width; i++){
-				for (let j = 0; j < this.width; j++){
-					output += char;
-				}
-				output += "\n";
+const Squire5 = require('./5-square');
+class Square extends Squire5 {
+	charPrint(c) {
+		const char = c || 'X';
+		if (this.width && this.height) {
+			for (let i = 0; i < this.height; i++) {
+				console.log(char.repeat(this.width));
 			}
-			console.log(output);
-		}else {
-			console.log("This is not a rectangle");
 		}
 	}
 }
+module.exports = Square;
