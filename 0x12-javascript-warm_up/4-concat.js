@@ -1,13 +1,4 @@
 #!/usr/bin/node
-
-const firstArg = process.agrv[2];
-const secondArg = process.argv[3];
-
-if (firstArg && secondArg)
-{
-	console.log('${firstArg} is ${secondAgv}');
-}
-else
-{
-	console.log("Not enough arguments. Please provibe two arguments.");
-}
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+console.log(`${arg1} is ${arg2}`);
