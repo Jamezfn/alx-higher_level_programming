@@ -1,3 +1,3 @@
 #!/bin/bash
-#scritp to send a get request to a url
-curl -sL  "$1"
+# Takes in a URL, sends a GET request to the URL, and displays the body of the response
+curl -s "$1"

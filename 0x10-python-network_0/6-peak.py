@@ -1,37 +1,18 @@
 #!/usr/bin/python3
-''' Defines peak-finding algorithm'''
-
-def find_peak(list_of_int):
-    '''Return peak in a list of unsorted int'''
-    if not list_of_int:
+"""Find a peak"""
+def find_peak(list_of_integers):
+    """Finds a peak in alist"""
+    if not list_of_integers:
         return None
 
-    def find_peak_util(arr, low, high):
-        mid = (low + high) // 2
+    lo, hi = 0, len(list_of_integers) - 1
 
-        # If mid is the peak
-        if (mid == 0 or arr[mid - 1] <= arr[mid]) and (mid == len(arr) - 1 or arr[mid + 1] <= arr[mid]):
-            return arr[mid]
+    while lo < hi:
+        mid = (lo + hi) // 2
 
-        # If the left neighbor is greater, move to the left half
-        if mid > 0 and arr[mid - 1] > arr[mid]:
-            return find_peak_util(arr, low, mid - 1)
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            lo = mid + 1
+        else:
+            hi = mid
 
-        # If the right neighbor is greater, move to the right half
-        return find_peak_util(arr, mid + 1, high)
-
-    return find_peak_util(list_of_int, 0, len(list_of_int) - 1)
-
-# Test cases
-if __name__ == "__main__":
-    test_cases = [
-        [1, 2, 4, 6, 3],
-        [4, 2, 1, 2, 3, 1],
-        [2, 2, 2],
-        [],
-        [-2, -4, 2, 1],
-        [4, 2, 1, 2, 2, 2, 3, 1]
-    ]
-
-    for test in test_cases:
-        print(find_peak(test))
+    return list_of_integers[lo]
