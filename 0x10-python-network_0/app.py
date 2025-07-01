@@ -48,7 +48,9 @@ def route_json():
 
 @app.route('/catch_me', methods=['POST'])
 def catch_me():
-    return 'You got me!'
+    if request.headers.get('User-id') == '98':
+        return 'You got me!'
+    return 'Wrong request', 400
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
